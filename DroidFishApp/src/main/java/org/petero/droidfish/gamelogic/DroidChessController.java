@@ -780,11 +780,11 @@ public class DroidChessController {
     }
 
     /** Called from the engine thread for every PV update. */
-    private void reviewNotify(Position pos, ArrayList<PvInfo> pvInfo) {
+    private void reviewNotify(Position pos, ArrayList<org.petero.droidfish.gamelogic.SearchListener.PvInfo> pvInfo) {
         if (!reviewListening)
             return;
-        PvInfo best = null;
-        for (PvInfo pv : pvInfo) {
+        org.petero.droidfish.gamelogic.SearchListener.PvInfo best = null;
+        for (org.petero.droidfish.gamelogic.SearchListener.PvInfo pv : pvInfo) {
             if (pv.depth > 0) {
                 best = pv;
                 break;
