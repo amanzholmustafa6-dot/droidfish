@@ -902,7 +902,7 @@ public class DroidChessController {
             switch (p) {
             case Piece.WQUEEN: case Piece.BQUEEN:
                 v = 900; break;
-                    case Piece.WROOK: case Piece.BROOK:
+            case Piece.WROOK: case Piece.BROOK:
                 v = 500; break;
             case Piece.WBISHOP: case Piece.BBISHOP:
             case Piece.WKNIGHT: case Piece.BKNIGHT:
@@ -1308,7 +1308,7 @@ public class DroidChessController {
                 game.undoMove();
                 if (!humansTurn()) {
                     game.redoMove();
-                    }
+                }
             } else {
                 // Don't undo first white move if playing black vs computer,
                 // because that would cause computer to immediately make
@@ -1456,4 +1456,4 @@ public class DroidChessController {
         if (game.getGameState() != GameState.ALIVE) return true;
         return false;
     }
-    }
+}
